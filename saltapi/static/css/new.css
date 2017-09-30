@@ -1,0 +1,13 @@
+
+ .ui.form .inline.field > select {
+  border:1px solid rgb(80, 164, 251);
+  width: 300px;
+}
+
+
+.ui.form input[type="text"],.ui.form input[type="password"] {
+  border-radius: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}

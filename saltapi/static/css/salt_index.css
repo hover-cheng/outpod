@@ -1,0 +1,44 @@
+.ui.grid {
+  height: 100%;
+  margin: 0px;
+}
+
+.two.wide.column {
+  background: rgb(50, 119, 144);
+  height: 100%;
+}
+
+.ui.grid > .fourteen.wide.column {
+  padding: 0px;
+  position: relative;
+  left: 12.5%;
+}
+
+ .ui.form .inline.field > select {
+  border:1px solid rgb(80, 164, 251);
+  width: 300px;
+}
+
+.ui.secondary.vertical.menu {
+  padding-top: 60px;
+}
+
+.ui.borderless.fixed.menu {
+  background: rgb(99, 120, 133);
+  position: relative;
+}
+
+.ui.form input[type="text"],.ui.form input[type="password"] {
+  border-radius: 0px;
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
+
+.ui.center.aligned.header {
+  color: rgb(99, 120, 133);
+}
+
+.item > a {
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,16 @@
+label {
+  white-space: nowrap;
+}
+
+.two.wide.field -> label{
+  font-size:20px;
+  white-space:normal;
+}
+
+.ui.checkbox {
+  margin:10px;
+ }
+
+ a:hover {
+   color: red;
+ }

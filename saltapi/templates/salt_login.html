@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <title>login</title>
+    <link rel="stylesheet" href="{% static 'css/salt_login.css' %}">
+    <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+    <script type="text/javascript" src="{% static 'js/reqwest.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/vue1.js' %}"></script>
+    <script src="{% static 'js/js.cookie.js' %}"></script>
+  </head>
+  <body id="app">
+      <div class="ui segment middle">
+          <div class="ui form">
+            <div class="inline fields">
+                <span><label class="label_1">用户名:</label></span>
+                <input type="text" name="username"  v-model="username" value="" placeholder="username">
+            </div>
+            <div class="inline fields">
+                <span><label >密 码:</label></span>
+                <input type="password" name="password"  v-model="password" value="" placeholder="password" @keyup.enter="logIn" >
+            </div>
+          </div>
+          <div class="field">
+              <button v-on:click="logIn"  class="ui basic blue  button right" type="submit" name="button">确认</button>
+          </div>
+      </div>
+      <script type="text/javascript" src={% static 'js/salt_login.js'%}></script>
+  </body>
+</html>

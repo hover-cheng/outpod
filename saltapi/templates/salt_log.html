@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/semantic.css'%}">
+    <script type="text/javascript" src="{% static 'js/vue1.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/reqwest.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/js.cookie.js' %}">
+
+    </script>
+    <title>操作日志</title>
+  </head>
+  <body id="app">
+    {% verbatim %}
+    <div class="ui basic segment">
+      <div class="ui inverted menu"></div>
+    </div>
+    <div class="ui basic segment">
+      <h1 v-else class="ui center aligned header">
+        <i class="users icon"></i>欢迎使用自助系统
+      </h1>
+      <table class="ui table">
+        <thead>
+          <tr>
+            <th>服务器IP</th>
+            <th>操作指令</th>
+            <th>操作时间</th>
+            <th>操作人</th>
+          </tr>
+          <tbody>
+            <tr v-for="log in pagin">
+              <td>{{log.ip}}</td>
+              <td>{{log.operation}}</td>
+              <td>{{log.createtime|dateFormat}}</td>
+              <td>{{log.operator}}</td>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+      <h2 id="bh2" class="ui center aligned header click" v-on:click="moreClick" >
+        <i class="angle double down large icon"></i>MORE
+      </h2>
+    </div>
+    {% endverbatim %}
+    <script type="text/javascript" src="{% static 'js/salt_log.js' %}">
+    </script>
+  </body>
+</html>

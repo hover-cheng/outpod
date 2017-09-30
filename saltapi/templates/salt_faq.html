@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/semantic.css' %}">
+    <link rel="stylesheet" href="{% static 'css/salt_faq.css'%}">
+    <title>FAQ</title>
+  </head>
+  <body>
+    <div class="ui inverted menu">
+    </div>
+    <div class="ui basic segment">
+      <h2>自定义指令说明</h2>
+    </div>
+    <div class="ui basic segment">
+      <h3>指令名称:</h3><p>一般使用 cmd.run</p>
+      <h3>参数1:</h3><p>linux 系统可以识别的指令，例如:cat ls tail 等等</p>
+      <h3>参数2:</h3><p>参数1指令所接受的参数,可以不写</p>
+    </div>
+    <div class="ui basic segment">
+      <h2>实例</h2>
+      <div class="ui bulleted list">
+        <div class="item">
+          <h4>需要查看服务器 home 目录下的内容</h4>
+          <p>指令名称: cmd.run</p>
+          <p>参数1: ls</p>
+          <p>参数2: /home</p>
+          <div class="ui divider"></div>
+        </div>
+        <div class="item">
+          <h4>需要修改主机的 hosts</h4>
+          <p>指令名称: cmd.run </p>
+          <p>参数1: echo "192.168.106.50 cdh-021" >> /etc/hosts </p>
+          <p>参数2:不写</p>
+          <div class="ui divider"></div>
+        </div>
+        <div class="item">
+          <h4>需要查看 /etc/hosts 的内容</h4>
+          <p>指令名称: cmd.run</p>
+          <p>参数1: tail -n 100 </p>
+          <p>参数2: /etc/hosts </p>
+          <p><strong><em>注意:尽量使用 tail -n 来指定查看文件的行数，如果能明切文件很小，也可以使用 cat 来查看</em></strong></p>
+          <div class="ui divider"></div>
+        </div>
+        <div class="item">
+          <h4>需要修改防火墙配置</h4>
+          <p>指令名称: cmd.run</p>
+          <p>参数1: iptables</p>
+          <p>参数2: -A INPUT -p tcp -m tcp --dport 8000 -j ACCEPT</p>
+          <div class="ui divider"></div>
+        </div>
+        <div class="item">
+          <h4>需要保存防火墙配置</h4>
+          <p>指令名称: cmd.run</p>
+          <p> service iptables save</p>
+          <p>参数2:不写</p>
+          <div class="ui divider"></div>
+        </div>
+      </div>
+
+    </div>
+  </body>
+</html>
