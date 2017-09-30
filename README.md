@@ -1,4 +1,4 @@
-###一个基于salt-api的服务器管理系统
+### 一个基于salt-api的服务器管理系统
 
 需要在salt-master上部署salt-api服务
 
