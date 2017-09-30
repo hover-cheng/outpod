@@ -1,11 +1,11 @@
-Ò»¸ö»ùÓÚsalt-apiµÄ·þÎñÆ÷¹ÜÀíÏµÍ³
+###ä¸€ä¸ªåŸºäºŽsalt-apiçš„æœåŠ¡å™¨ç®¡ç†ç³»ç»Ÿ
 
-ÐèÒªÔÚsalt-masterÉÏ²¿Êðsalt-api·þÎñ
+éœ€è¦åœ¨salt-masterä¸Šéƒ¨ç½²salt-apiæœåŠ¡
 
-ÔÚÒµÎñµÄsaltapi.pyÀïÃæ±àÐ´Ïòsalt-master·¢ËÍµÄapiµÄÖ¸Áî¸ñÊ½
-ÔÚÒµÎñµÄapi.pyÀïÃæ±àÐ´ÒµÎñµÄapi½Ó¿Ú£¬Í¨¹ýpost·½·¨½«Ç°¶ËÊý¾Ý´«µ½ºó¶Ë£¬²¢ÇÒµ÷ÓÃsaltapi.pyÖÐ¸÷ÖÖapiÖ¸ÁîµÄ·½·¨
+åœ¨ä¸šåŠ¡çš„saltapi.pyé‡Œé¢ç¼–å†™å‘salt-masterå‘é€çš„apiçš„æŒ‡ä»¤æ ¼å¼
+åœ¨ä¸šåŠ¡çš„api.pyé‡Œé¢ç¼–å†™ä¸šåŠ¡çš„apiæŽ¥å£ï¼Œé€šè¿‡postæ–¹æ³•å°†å‰ç«¯æ•°æ®ä¼ åˆ°åŽç«¯ï¼Œå¹¶ä¸”è°ƒç”¨saltapi.pyä¸­å„ç§apiæŒ‡ä»¤çš„æ–¹æ³•
 
-¹¦ÄÜ
-1.¿ÉÒÔ×Ô¶¨ÒåÒ»Ð©³£ÓÃµÄsaltÖ¸Áî
-2.¿ÉÒÔÊÖ¶¯ÊäÈësaltÖ¸Áî
-3.¿ÉÒÔ¶ÔÖ¸¶¨µÄÏîÄ¿´ò°ü£¬ÏÂ·¢ÎÄ¼þ
+* ä¸»è¦åŠŸèƒ½
+>* è‡ªå®šä¹‰ä¸€äº›å¸¸ç”¨çš„saltæŒ‡ä»¤
+>* æ‰‹åŠ¨è¾“å…¥saltæŒ‡ä»¤
+>* å¯¹æŒ‡å®šçš„é¡¹ç›®æ‰“åŒ…ï¼Œä¸‹å‘æ–‡ä»¶
