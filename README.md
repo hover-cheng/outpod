@@ -4,6 +4,7 @@
 
 在业务的saltapi.py里面编写向salt-master发送的api的指令格式
 在业务的api.py里面编写业务的api接口，通过post方法将前端数据传到后端，并且调用saltapi.py中各种api指令的方法
+使用mysql存储数据，需要在setting.py配置数据库的信息
 
 * 主要功能
 >* 自定义一些常用的salt指令
