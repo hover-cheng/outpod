@@ -19,3 +19,4 @@
 5.启动项目\
 6.在admin管理配置服务器的，ProjectList（服务所属项目，用于权限管理），GroupList(服务器所属的业务组），AppName(服务器上的业务名称，用于自动更新），ServerList（服务器信息)，CommandList（自定义执行指令），MvnOrder（manven打包指令)，MvnType(打包类型，用户判断更新调用的脚本)，OperationLog(操作日志)\
 7.将项目中的update_tomcat.sh和create_docker.sh上传到minion服务器的/home/opt/scripts/目录下，用户调用更新脚本\
+
