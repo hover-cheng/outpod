@@ -39,3 +39,11 @@ def salt_faq(request):
 def salt_log(request):
     content = {}
     return render(request, 'salt_log.html', content)
+
+
+def salt_ssh(request):
+    return render(request, 'webssh.html')
+
+
+def index(request):
+    return render(request, 'saltapi/index.html', {})

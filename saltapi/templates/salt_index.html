@@ -15,14 +15,15 @@
 <body id="app">
   {% verbatim %}
   <div class="ui grid">
-    <div class="two wide column" style="position: fixed;">
-      <div class="ui fluid secondary vertical menu">
+    <div class="left column">
+      <div class="ui fluid secondary vertical menu" >
+        <h2 class="ui center aligned icon header" style="color: rgb(250, 250, 250)"><img src="../static/images/patrick.png" class="ui circular image"></img> <p>{{username}}</p> </h2>
         <a v-for="grp in groupinfo" class="item" id="{{grp.id}}" v-on:click="getserverinfo(grp.id)">
-          <p style='color: rgb(255, 255, 255); font-size:16px;'><i class="linux icon"></i>{{grp.name}}</p>
+          <p style='color: rgb(255, 255, 255); font-size:14px;'><i class="desktop icon"></i>{{grp.name}}</p>
         </a>
       </div>
     </div>
-    <div class="fourteen wide column">
+    <div class="right column">
       <div class="ui borderless fixed menu">
         <div class="right menu">
           <div class="item">
@@ -40,6 +41,7 @@
           <div class="item">
             <a href="salt/login" title="重新登陆"><i class="large power icon"></i></a>
           </div>
+          {{groupname_1}}
         </div>
       </div>
       <div class="ui basic segment">
@@ -106,6 +108,13 @@
                   <option value="0">选择构建指令</option>
                   <option v-for="mvno in mvnorder" value={{mvno.mvnorder}}>{{mvno.mvnorder}}</option>
                 </select>
+                  <select v-if="groupname == 'Docker'" class="ui dropdown select" v-model="buildnum">
+                    <option value=0>选择容器数量</option>
+                    <option value=1>1</option>
+                    <option value=2>2</option>
+                    <option value=3>3</option>
+                    <option value=4>4</option>
+                  </select>
                 <input type="password" title="输入验证码才能提交" v-model="code"  name="" value="" placeholder="认证码">
             </div>
             <div class="field">
@@ -113,7 +122,9 @@
             </div>
             </div>
           </div>
-
+          <h4 class="ui left aligned header">
+            服务器数量：{{server.length}}台
+          </h4>
           <table class="ui celled table">
             <thead>
               <tr>
@@ -128,6 +139,7 @@
                 <th>所属项目</th>
                 <th>业务描述</th>
                 <th>业务负责人</th>
+                <th v-if="username == 'admin'">远程连接</th>
               </tr>
             </thead>
             <tbody>
@@ -144,6 +156,10 @@
                 <td>{{ser.belong_to.belong_to.name}}</td>
                 <td>{{ser.description}}</td>
                 <td>{{ser.director}}</td>
+                <td v-if="username == 'admin'">
+                <a href='/chat/xtem?ipadd={{ser.ip}}' target="_blank" class="ui icon image" ><i class="large laptop icon"></i>
+                  </a>
+                </td>
               </tr>
             </tbody>
           </table>

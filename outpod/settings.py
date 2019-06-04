@@ -33,7 +33,7 @@ LOGGING = {
         'default': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/log/all.log',     # output file
+            'filename': '/home/logs/output/all.log',     # output file
             'maxBytes': 1024 * 1024 * 5,                  # file size
             'backupCount': 5,                         # backfile num
             'formatter': 'standard',                   # type of formatters
@@ -41,7 +41,7 @@ LOGGING = {
         'error': {
             'level': 'ERROR',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/log/error.log',
+            'filename': '/home/logs/output/error.log',
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,
             'formatter': 'standard',
@@ -54,7 +54,7 @@ LOGGING = {
         'request_handler': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/log/script.log',
+            'filename': '/home/logs/output/script.log',
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,
             'formatter': 'standard',
@@ -62,7 +62,7 @@ LOGGING = {
         'scprits_handler': {
             'level': 'DEBUG',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': '/log/script.log',
+            'filename': '/home/logs/output/script.log',
             'maxBytes': 1024 * 1024 * 5,
             'backupCount': 5,
             'formatter': 'standard',
@@ -115,6 +115,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'saltapi',
+    'channels',
 ]
 
 MIDDLEWARE = [
@@ -146,6 +147,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'outpod.wsgi.application'
+ASGI_APPLICATION = "outpod.routing.application"
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (

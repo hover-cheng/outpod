@@ -16,7 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from rest_framework.authtoken import views
-from saltapi.views import salt_index, salt_faq, salt_login, salt_log
+from saltapi.views import salt_index, salt_faq, salt_login, salt_log, salt_ssh
 from saltapi.api import serverlist, grouplist, commandlist, getresult, customorder, serverinfo, updateorder, appnamelist, mvntypelist, mvnorderlist, operationlist, findserver
 
 
@@ -42,4 +42,5 @@ urlpatterns = [
     url(r'^api/salt/app', appnamelist),
     url(r'^api/salt/mvntype$', mvntypelist),
     url(r'^api/salt/mvnorder$', mvnorderlist),
+    url(r'^salt/webssh', salt_ssh, name='salt_ssh'),
 ]
