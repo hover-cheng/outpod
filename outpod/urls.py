@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^salt/faq$', salt_faq, name='salt_faq'),
     url(r'^salt/login$', salt_login, name="salt_login"),
     url(r'^salt/log$', salt_log, name='salt_log'),
+    url(r'^salt/webssh', salt_ssh, name='salt_ssh'),
 
     url(r'^api/salt/findserver$', findserver),
     url(r'^api/salt/server$', serverlist),
@@ -42,5 +43,4 @@ urlpatterns = [
     url(r'^api/salt/app', appnamelist),
     url(r'^api/salt/mvntype$', mvntypelist),
     url(r'^api/salt/mvnorder$', mvnorderlist),
-    url(r'^salt/webssh', salt_ssh, name='salt_ssh'),
 ]

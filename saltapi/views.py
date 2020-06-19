@@ -42,7 +42,7 @@ def salt_log(request):
 
 
 def salt_ssh(request):
-    return render(request, 'webssh.html')
+    return render(request, 'salt_webssh.html')
 
 
 def index(request):
